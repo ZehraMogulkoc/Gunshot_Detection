@@ -4,7 +4,7 @@ import numpy as np
 from shutil import copyfile
 
 # Paths
-dataset_csv_path = r"D:\iot_project\UrbanSound8K\metadata\CombinedUrbanSound8K-2.csv"
+dataset_csv_path = r"D:\iot_project\UrbanSound8K\metadata\CombinedUrbanSound8K.csv"
 audio_dir = r"D:\iot_project\UrbanSound8K\audio"
 new_dataset_path = r"D:\iot_project\Fold_increased\audio"
 
@@ -35,7 +35,8 @@ for _, row in df.iterrows():
     
     # Check if file exists and then copy
     if os.path.exists(original_file_path):
-        copyfile(original_file_path, new_file_path)
+       # copyfile(original_file_path, new_file_path)
+        print(1)
     else:
         print(f"File not found: {original_file_path}")
 

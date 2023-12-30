@@ -4,9 +4,9 @@ import numpy as np
 import sys
 import os
 
-urban_sound_path = "D:\\iot_project\\UrbanSound8K"
+urban_sound_path = "D:\\iot_project\\Fold_increased"
 # Load UrbanSound8K metadata
-urban_sound_metadata_path = os.path.join(urban_sound_path, "metadata", "CombinedUrbanSound8K.csv")
+urban_sound_metadata_path = os.path.join(urban_sound_path, "metadata", "CombinedUrbanSound8K-modified.csv")
 df = pd.read_csv(urban_sound_metadata_path)
 #df = pd.DataFrame.from_csv(dataset_csv)
 print(df.columns)
@@ -22,4 +22,4 @@ new_metadata.loc[df["class"] != "gun_shot", "classID"] = 0
 new_metadata.loc[df["class"] == "gun_shot", "classID"] = 1
 new_metadata.groupby("classID").count()
 
-new_metadata.to_csv(r"D:\iot_project\UrbanSound8K\metadata\CombinedUrbanSound8K-2.csv",index=False)
+new_metadata.to_csv(r"D:\iot_project\Fold_increased\metadata\CombinedUrbanSound8K-modified.csv",index=False)

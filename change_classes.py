@@ -5,10 +5,10 @@ import sys
 import os
 
 
-urban_sound_path = "D:\\iot_project\\UrbanSound8K"
+urban_sound_path = "D:\\iot_project\\Fold_increased"
 
 # Load UrbanSound8K metadata
-urban_sound_metadata_path = os.path.join(urban_sound_path, "metadata", "CombinedUrbanSound8K-2.csv")
+urban_sound_metadata_path = os.path.join(urban_sound_path, "metadata", "CombinedUrbanSound8K-modified.csv")
 df = pd.read_csv(urban_sound_metadata_path)
 
 print(df.columns)
@@ -30,4 +30,4 @@ new_metadata.loc[df["classID"] == 0, "class"] = "no_gun_shot"
 print(new_metadata.groupby("class").count())
 
 # Save the updated metadata to a new CSV file
-new_metadata.to_csv(r"D:\iot_project\UrbanSound8K\metadata\CombinedUrbanSound8K-2.csv", index=False)
+new_metadata.to_csv(r"D:\iot_project\Fold_increased\metadata\CombinedUrbanSound8K-modified.csv", index=False)

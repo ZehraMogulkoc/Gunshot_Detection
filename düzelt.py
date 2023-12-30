@@ -13,7 +13,7 @@ urban_sound_metadata_path = os.path.join(urban_sound_path, "metadata", "Combined
 urban_sound_metadata = pd.read_csv(urban_sound_metadata_path)
 
 # Update the 'fold' column where 'slice_file_name' starts with '8 ('
-urban_sound_metadata.loc[urban_sound_metadata['slice_file_name'].str.startswith('3 ('), 'fold'] = 10
+urban_sound_metadata.loc[urban_sound_metadata['file_name'].str.startswith('3 ('), 'fold'] = 10
 
 # Display the updated DataFrame
 print(urban_sound_metadata)
