@@ -3,3 +3,4 @@ This repository focuses on the development and deployment of a gunshot detection
 
 # Dataset Augmentation
 To bolster the efficacy and accuracy of our detection model, we enriched the renowned Urban8K dataset with an additional 900 gunshot sound samples. This augmentation strategy facilitated the creation of a binary dataset, enabling the model to distinguish between gunshot and ambient sounds effectively.
+[IOT BASED GUNSHOT DETECTION SYSTEM.pdf](https://github.com/ZehraMogulkoc/Gunshot_Detection/files/14744548/IOT.BASED.GUNSHOT.DETECTION.SYSTEM.pdf)
